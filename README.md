@@ -33,8 +33,8 @@ Windows versions
 
 This repo contains packer templates for following Windows versions:
 
-Windows 10
-Windows 2012 R2
+*Windows 10
+*Windows 2012 R2
 
 
 Supported versions

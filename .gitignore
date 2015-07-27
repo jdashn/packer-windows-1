@@ -11,7 +11,7 @@
 # *.sublime-project
 
 # sftp configuration file
-sftp-config.json
+#sftp-config.json
 
 # project files and folders
 *.iso

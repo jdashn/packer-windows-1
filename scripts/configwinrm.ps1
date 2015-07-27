@@ -2,7 +2,7 @@ Set-NetConnectionProfile -Name Network -NetworkCategory Private
 winrm quickconfig -q
 winrm quickconfig -transport:http
 winrm set winrm/config '@{MaxTimeoutms="7200000"}'
-winrm set winrm/config/winrs '@{MaxMemoryPerShellMB="0"}'
+winrm set winrm/config/winrs '@{MaxMemoryPerShellMB="2048"}'
 winrm set winrm/config/winrs '@{MaxProcessesPerShell="0"}'
 winrm set winrm/config/winrs '@{MaxShellsPerUser="0"}'
 winrm set winrm/config/service '@{AllowUnencrypted="true"}'

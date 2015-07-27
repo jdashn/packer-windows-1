@@ -7,7 +7,7 @@
       "output_directory":"./build/win10x64-pro",
       "iso_url": "iso/en_windows_10_pro_10240_x64_dvd.iso",
       "iso_checksum_type": "md5",
-      "iso_checksum": "ecae7684bc1e6f6a4b44b9116e9ac596",
+      "iso_checksum": "c4a5729f5d00a2c8a1106eef1ded4189",
       "headless": false,
       "boot_wait": "2m",
       "communicator": "winrm",

@@ -69,8 +69,8 @@
                     <WillShowUI>OnError</WillShowUI>
                 </ProductKey>
                 <AcceptEula>true</AcceptEula>
-                <FullName>Skylock</FullName>
-                <Organization>EMC</Organization>
+                <FullName>Vagrant Administrator</FullName>
+                <Organization>Vagrant Inc.</Organization>
             </UserData>
         </component>
     </settings>
@@ -79,7 +79,8 @@
             <OEMInformation>
                 <HelpCustomized>false</HelpCustomized>
             </OEMInformation>
-            <ComputerName>win-2012-r2</ComputerName>
+            <!-- Rename computer here. -->
+            <ComputerName>win2012r2</ComputerName>
             <TimeZone>GTB Standard Time</TimeZone>
             <RegisteredOwner/>
         </component>
@@ -101,7 +102,7 @@
         <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
             <AutoLogon>
                 <Password>
-                    <Value>12345x*</Value>
+                    <Value>vagrant</Value>
                     <PlainText>true</PlainText>
                 </Password>
                 <Enabled>true</Enabled>
@@ -150,19 +151,19 @@
             </OOBE>
             <UserAccounts>
                 <AdministratorPassword>
-                    <Value>TT</Value>
+                    <Value>vagrant</Value>
                     <PlainText>true</PlainText>
                 </AdministratorPassword>
                 <LocalAccounts>
                     <LocalAccount wcm:action="add">
                         <Password>
-                            <Value>12345x*</Value>
+                            <Value>vagrant*</Value>
                             <PlainText>true</PlainText>
                         </Password>
                         <Group>administrators</Group>
-                        <DisplayName>ts</DisplayName>
-                        <Name>ts</Name>
-                        <Description>Temporary User</Description>
+                        <DisplayName>vagrant</DisplayName>
+                        <Name>vagrant</Name>
+                        <Description>Vagrant User</Description>
                     </LocalAccount>
                 </LocalAccounts>
             </UserAccounts>

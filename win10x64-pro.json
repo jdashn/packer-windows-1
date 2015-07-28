@@ -38,7 +38,7 @@
     "provisioners": [{
     "type": "windows-shell",
     "scripts": [
-      "scripts/vm-guest-tools.bat"
+      "scripts/vmtools.bat"
     ]
   }]
 }

@@ -82,7 +82,7 @@
       <component xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
           <UserAccounts>
               <AdministratorPassword>
-                  <Value>TT</Value>
+                  <Value>vagrant</Value>
                   <PlainText>true</PlainText>
               </AdministratorPassword>
               <LocalAccounts>
@@ -106,10 +106,10 @@
           </OOBE>
           <AutoLogon>
               <Password>
-                  <Value>TT</Value>
+                  <Value>vagrant</Value>
                   <PlainText>true</PlainText>
               </Password>
-              <Username>Administrator</Username>
+              <Username>vagrant</Username>
               <Enabled>true</Enabled>
           </AutoLogon>
           <FirstLogonCommands>

@@ -8,6 +8,6 @@ C:\Windows\SysWOW64\cmd.exe /c powershell -Command "Set-ExecutionPolicy -Executi
 %SystemRoot%\System32\reg.exe ADD HKLM\SYSTEM\CurrentControlSet\Control\Power\ /v HibernateFileSizePercent /t REG_DWORD /d 0 /f
 %SystemRoot%\System32\reg.exe ADD HKLM\SYSTEM\CurrentControlSet\Control\Power\ /v HibernateEnabled /t REG_DWORD /d 0 /f
 
-::Disable password expiration for ts user
-cmd.exe /c wmic useraccount where "name='ts'" set PasswordExpires=FALSE
+::Disable password expiration for vagrant user
+cmd.exe /c wmic useraccount where "name='vagrant'" set PasswordExpires=FALSE
 

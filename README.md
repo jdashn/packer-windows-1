@@ -33,14 +33,15 @@ Windows versions
 
 This repo contains packer templates for following Windows versions:
 
-- Windows 10
+- Windows 10 x64
+- Windows 10 x86
 - Windows 2012 R2
 
 
 Supported versions
 ------------------
 
-This templates where tested using a packer 0.8.2 and VMware Workstation 8
+This templates where tested using a packer 0.8.6 and VMware Workstation 12 Pro
 
 ### credits
 

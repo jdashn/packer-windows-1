@@ -23,6 +23,7 @@
       "vnc_port_max": 5980,
       "floppy_files": [
         "floppy/win10x64-pro/Autounattend.xml",
+        "scripts/fixnetwork.ps1",
         "scripts/configwinrm.ps1"
       ],
       "vmdk_name": "win10x64-pro",

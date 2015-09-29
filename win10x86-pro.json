@@ -2,44 +2,51 @@
   "builders": [
     {
       "type": "vmware-iso",
-      "vm_name": "win10x86-pro",
+      "vm_name": "{{ user `vm_name` }}",
       "version" : 8,
-      "output_directory":"./build/win10x86-pro",
-      "iso_url": "iso/en_windows_10_pro_10240_x86_dvd.iso",
+      "output_directory":"./build/{{ user `vm_name` }}",
+      "iso_url": "{{ user `iso_url` }}",
       "iso_checksum_type": "md5",
-      "iso_checksum": "317f479f03f481e706b61123b9a39edb",
-      "headless": false,
+      "iso_checksum": "{{ user `iso_checksum` }}",
+      "headless": "{{ user `headless` }}",
       "boot_wait": "2m",
       "communicator": "winrm",
       "winrm_username": "vagrant",
       "winrm_password": "vagrant",
       "winrm_timeout": "2h",
       "shutdown_timeout": "1h",
-      "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
+      "shutdown_command": "{{ user `shutdown_command`}}",
       "guest_os_type": "windows8",
-      "disk_size": 131072,
+      "disk_size": "{{ user `disk_size` }}",
       "disk_type_id":"0",
-      "vnc_port_min": 5900,
-      "vnc_port_max": 5980,
       "floppy_files": [
         "floppy/win10x86-pro/Autounattend.xml",
         "scripts/fixnetwork.ps1",
         "scripts/configwinrm.ps1"
       ],
-      "vmdk_name": "win10x86-pro",
+      "vmdk_name": "{{ user `vm_name` }}",
       "vmx_data": {
         "mks.enable3d": "true",
-        "displayName": "Windows.10.Professional.x86",
         "memsize": "2048",
-        "numvcpus": "4",
+        "numvcpus": "1",
         "scsi0.virtualDev": "lsisas1068"
       }
-    }],
-
-    "provisioners": [{
-    "type": "windows-shell",
-    "scripts": [
-      "scripts/vmtools.bat"
-    ]
-  }]
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "windows-shell",
+      "scripts": [
+        "scripts/vmtools.bat"
+      ]
+    }
+  ],
+  "variables": {
+    "vm_name": "win10x86-pro",
+    "headless": "false",
+    "disk_size": "131072",
+    "iso_checksum": "317f479f03f481e706b61123b9a39edb",
+    "iso_url": "./iso/en_windows_10_pro_10240_x86_dvd.iso",
+    "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\""
+  }
 }

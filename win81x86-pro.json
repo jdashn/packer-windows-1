@@ -16,17 +16,17 @@
       "winrm_timeout": "2h",
       "shutdown_timeout": "1h",
       "shutdown_command": "{{ user `shutdown_command`}}",
-      "guest_os_type": "windows7srv-64",
+      "guest_os_type": "windows8",
       "disk_size": "{{ user `disk_size` }}",
       "disk_type_id":"0",
       "floppy_files": [
-        "floppy/win2008r2-standard/Autounattend.xml",
+        "floppy/win81x86-pro/Autounattend.xml",
         "scripts/init.bat",
-        "scripts/dis-updates.ps1",
         "scripts/winrm.bat"
       ],
       "vmdk_name": "{{ user `vm_name` }}",
       "vmx_data": {
+        "mks.enable3d": "true",
         "memsize": "2048",
         "numvcpus": "1",
         "scsi0.virtualDev": "lsisas1068"
@@ -43,11 +43,11 @@
     }
   ],
   "variables": {
-    "vm_name": "win2008r2-standard",
+    "vm_name": "win81x86-pro",
     "headless": "false",
     "disk_size": "131072",
-    "iso_checksum": "7e7e9425041b3328ccf723a0855c2bc4f462ec57",
-    "iso_url": "./iso/en_windows_server_2008_r2_standard_enterprise_datacenter_and_web_with_sp1_vl_build_x64_dvd_617403.iso",
+    "iso_checksum": "802cfcd3a411d99c097ea7e747f0b6697f9bdac4",
+    "iso_url": "./iso/en_windows_8_1_x86_dvd_2707392.iso",
     "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\""
   }
 }

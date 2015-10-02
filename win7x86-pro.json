@@ -16,7 +16,7 @@
       "winrm_timeout": "2h",
       "shutdown_timeout": "1h",
       "shutdown_command": "{{ user `shutdown_command`}}",
-      "guest_os_type": "windows7-64",
+      "guest_os_type": "windows7",
       "disk_size": "{{ user `disk_size` }}",
       "disk_type_id":"0",
       "floppy_files": [
@@ -39,7 +39,7 @@
       "type": "windows-shell",
       "scripts": [
         "scripts/vmtools.bat",
-        "scripts/rdp.bat"
+        "scripts/enable-rdp.bat"
       ]
     }
   ],

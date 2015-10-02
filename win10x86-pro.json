@@ -6,7 +6,7 @@
       "version" : 8,
       "output_directory":"./build/{{ user `vm_name` }}",
       "iso_url": "{{ user `iso_url` }}",
-      "iso_checksum_type": "md5",
+      "iso_checksum_type": "sha1",
       "iso_checksum": "{{ user `iso_checksum` }}",
       "headless": "{{ user `headless` }}",
       "boot_wait": "2m",
@@ -37,7 +37,8 @@
     {
       "type": "windows-shell",
       "scripts": [
-        "scripts/vmtools.bat"
+        "scripts/vmtools.bat",
+        "scripts/enable-rdp.bat"
       ]
     }
   ],
@@ -45,7 +46,7 @@
     "vm_name": "win10x86-pro",
     "headless": "false",
     "disk_size": "131072",
-    "iso_checksum": "317f479f03f481e706b61123b9a39edb",
+    "iso_checksum": "f759cc7bd4c3a0bb8005428cbfd29a6af8252638",
     "iso_url": "./iso/en_windows_10_pro_10240_x86_dvd.iso",
     "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\""
   }

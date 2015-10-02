@@ -32,9 +32,12 @@ Windows versions
 This repo contains packer templates for following Windows versions:
 
 - Windows 2012 R2
+- Windows 2012
 - Windows 2008 R2
 - Windows 10 x64
 - Windows 10 x86
+- Windows 8.1 x64
+- Windows 8.1 x86
 - Windows 7 x64
 - Windows 7 x86
 

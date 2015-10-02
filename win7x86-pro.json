@@ -1,0 +1,54 @@
+{
+  "builders": [
+    {
+      "type": "vmware-iso",
+      "vm_name": "{{ user `vm_name` }}",
+      "version" : 8,
+      "output_directory":"./build/{{ user `vm_name` }}",
+      "iso_url": "{{ user `iso_url` }}",
+      "iso_checksum_type": "sha1",
+      "iso_checksum": "{{ user `iso_checksum` }}",
+      "headless": "{{ user `headless` }}",
+      "boot_wait": "2m",
+      "communicator": "winrm",
+      "winrm_username": "vagrant",
+      "winrm_password": "vagrant",
+      "winrm_timeout": "2h",
+      "shutdown_timeout": "1h",
+      "shutdown_command": "{{ user `shutdown_command`}}",
+      "guest_os_type": "windows7-64",
+      "disk_size": "{{ user `disk_size` }}",
+      "disk_type_id":"0",
+      "floppy_files": [
+        "floppy/win7x86-pro/Autounattend.xml",
+        "scripts/init.bat",
+        "scripts/dis-updates.ps1",
+        "scripts/winrm.bat"
+      ],
+      "vmdk_name": "{{ user `vm_name` }}",
+      "vmx_data": {
+        "mks.enable3d": "true",
+        "memsize": "2048",
+        "numvcpus": "1",
+        "scsi0.virtualDev": "lsisas1068"
+      }
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "windows-shell",
+      "scripts": [
+        "scripts/vmtools.bat",
+        "scripts/rdp.bat"
+      ]
+    }
+  ],
+  "variables": {
+    "vm_name": "win7x86-pro",
+    "headless": "false",
+    "disk_size": "131072",
+    "iso_checksum": "bfd568f6fd833ed5ccf6794844d46517662e40a3",
+    "iso_url": "./iso/en_windows_7_with_sp1_x86_dvd_u_677460.iso",
+    "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\""
+  }
+}

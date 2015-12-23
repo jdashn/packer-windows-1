@@ -21,8 +21,8 @@
       "disk_type_id":"0",
       "floppy_files": [
         "floppy/win7x64-pro/Autounattend.xml",
-        "scripts/init.bat",
         "scripts/dis-updates.ps1",
+        "scripts/init.bat",
         "scripts/winrm.bat"
       ],
       "vmdk_name": "{{ user `vm_name` }}",

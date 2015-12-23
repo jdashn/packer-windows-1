@@ -21,6 +21,7 @@
       "disk_type_id":"0",
       "floppy_files": [
         "floppy/win2012r2-standard/Autounattend.xml",
+        "scripts/win-updates.ps1",
         "scripts/init.bat",
         "scripts/winrm.bat"
       ],
@@ -29,7 +30,8 @@
         "mks.enable3d": "true",
         "memsize": "2048",
         "numvcpus": "1",
-        "scsi0.virtualDev": "lsisas1068"
+        "scsi0.virtualDev": "lsisas1068",
+        "gui.applyHostDisplayScalingToGuest": "false"
       }
     }
   ],

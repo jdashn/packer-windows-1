@@ -30,7 +30,8 @@
         "mks.enable3d": "true",
         "memsize": "2048",
         "numvcpus": "1",
-        "scsi0.virtualDev": "lsisas1068"
+        "scsi0.virtualDev": "lsisas1068",
+        "gui.applyHostDisplayScalingToGuest": "false"
       }
     }
   ],

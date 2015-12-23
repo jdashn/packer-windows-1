@@ -45,7 +45,7 @@ This repo contains packer templates for following Windows versions:
 Supported versions
 ------------------
 
-This templates where tested using a packer 0.8.6 and VMware Workstation 12 Pro.
+This templates where tested using a packer 0.8.6 and VMware Workstation 12.1 Pro.
 
 #### note
 Windows ISO images must be placed in iso folder and file checksums must be updated in template.

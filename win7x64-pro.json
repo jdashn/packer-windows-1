@@ -40,7 +40,8 @@
       "type": "windows-shell",
       "scripts": [
         "scripts/vmtools.bat",
-        "scripts/enable-rdp.bat"
+        "scripts/enable-rdp.bat",
+        "scripts/powerconfig.bat"
       ]
     }
   ],

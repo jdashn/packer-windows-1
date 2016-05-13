@@ -1,4 +1,4 @@
-Set-NetConnectionProfile -Name Network -NetworkCategory Private
+Get-NetAdapter | Set-NetConnectionProfile -NetworkCategory Private
 winrm quickconfig -q
 winrm quickconfig -transport:http
 winrm set winrm/config '@{MaxTimeoutms="7200000"}'

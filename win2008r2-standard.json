@@ -23,6 +23,8 @@
         "floppy/win2008r2-standard/Autounattend.xml",
         "scripts/init.bat",
         "scripts/dis-updates.ps1",
+        "./scripts/microsoft-updates.bat",
+        "./scripts/win-updates.ps1",
         "scripts/winrm.bat"
       ],
       "vmdk_name": "{{ user `vm_name` }}",
@@ -38,7 +40,8 @@
       "type": "windows-shell",
       "scripts": [
         "scripts/vmtools.bat",
-        "scripts/enable-rdp.bat"
+        "scripts/enable-rdp.bat",
+        "scripts/powerconfig.bat"
       ]
     }
   ],

@@ -80,7 +80,7 @@
                 <HelpCustomized>false</HelpCustomized>
             </OEMInformation>
             <!-- Rename computer here. -->
-            <ComputerName>win2012r2</ComputerName>
+            <ComputerName>win2016</ComputerName>
             <TimeZone>GTB Standard Time</TimeZone>
             <RegisteredOwner/>
         </component>

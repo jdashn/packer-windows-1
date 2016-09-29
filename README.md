@@ -31,7 +31,7 @@ Windows versions
 
 This repo contains packer templates for following Windows versions:
 
-- Windows 20116 Technical Preview 5
+- Windows 2016
 - Windows 2012 R2
 - Windows 2012
 - Windows 2008 R2

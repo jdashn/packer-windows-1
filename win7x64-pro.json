@@ -20,10 +20,13 @@
       "disk_size": "{{ user `disk_size` }}",
       "disk_type_id":"0",
       "floppy_files": [
-        "floppy/win7x64-pro/Autounattend.xml",
-        "scripts/dis-updates.ps1",
-        "scripts/init.bat",
-        "scripts/winrm.bat"
+        "./floppy/win7x64-pro/Autounattend.xml",
+        "./scripts/dis-updates.ps1",
+        "./scripts/hotfix-KB3102810.bat",
+        "./scripts/microsoft-updates.bat",
+        "./scripts/win-updates.ps1",
+        "./scripts/init.bat",
+        "./scripts/winrm.bat"
       ],
       "vmdk_name": "{{ user `vm_name` }}",
       "vmx_data": {

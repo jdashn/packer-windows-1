@@ -20,7 +20,7 @@
       "disk_size": "{{ user `disk_size` }}",
       "disk_type_id":"0",
       "floppy_files": [
-        "floppy/win7x86-pro/Autounattend.xml",
+        "./floppy/win7x86-pro/Autounattend.xml",
         "./scripts/dis-updates.ps1",
         "./scripts/hotfix-KB3102810.bat",
         "./scripts/microsoft-updates.bat",

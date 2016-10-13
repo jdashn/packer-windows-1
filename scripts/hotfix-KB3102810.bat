@@ -4,9 +4,20 @@
 
 @echo off
 
-@powershell -NoProfile -ExecutionPolicy Bypass -Command "((new-object net.webclient).DownloadFile('https://download.microsoft.com/download/F/A/A/FAABD5C2-4600-45F8-96F1-B25B137E3C87/Windows6.1-KB3102810-x64.msu', 'C:\Windows\Temp\Windows6.1-KB3102810-x64.msu'))"
+if "%PROCESSOR_ARCHITECTURE%"=="AMD64" goto 64BIT
+	else goto 32BIT
 
+:32BIT	
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "((new-object net.webclient).DownloadFile('https://download.microsoft.com/download/F/A/A/FAABD5C2-4600-45F8-96F1-B25B137E3C87/Windows6.1-KB3102810-x86.msu', 'C:\Windows\Temp\Windows6.1-KB3102810-x86.msu'))"
+set hotfix="C:\Windows\Temp\Windows6.1-KB3102810-x86.msu"
+goto MAIN
+
+:64BIT
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "((new-object net.webclient).DownloadFile('https://download.microsoft.com/download/F/A/A/FAABD5C2-4600-45F8-96F1-B25B137E3C87/Windows6.1-KB3102810-x64.msu', 'C:\Windows\Temp\Windows6.1-KB3102810-x64.msu'))"
 set hotfix="C:\Windows\Temp\Windows6.1-KB3102810-x64.msu"
+goto MAIN
+
+:MAIN
 if not exist %hotfix% goto :eof
 
 :: get windows version

@@ -52,8 +52,8 @@
   {
     "type": "vagrant",
     "keep_input_artifact": true,
-    "output": "windows_7_{{.Provider}}.box",
-    "vagrantfile_template": "vagrantfile-windows_7.template"
+    "output": "windows_7x64_{{.Provider}}.box",
+    "vagrantfile_template": "vagrantfile-windows_7x64.template"
   }
   ],
   "variables": {

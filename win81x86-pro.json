@@ -21,8 +21,12 @@
       "disk_type_id":"0",
       "floppy_files": [
         "floppy/win81x86-pro/Autounattend.xml",
-        "scripts/init.bat",
-        "scripts/winrm.bat"
+        "./scripts/init.bat",
+        "./scripts/dis-updates.ps1",
+        "./scripts/microsoft-updates.bat",
+        "./scripts/win-updates.ps1",
+        "./scripts/hotfix-KB2842230.bat",
+        "./scripts/winrm.bat"
       ],
       "vmdk_name": "{{ user `vm_name` }}",
       "vmx_data": {

@@ -20,12 +20,12 @@
       "disk_size": "{{ user `disk_size` }}",
       "disk_type_id":"0",
       "floppy_files": [
-        "floppy/win2008r2-standard/Autounattend.xml",
-        "scripts/init.bat",
-        "scripts/dis-updates.ps1",
+        "./floppy/win2008r2-standard/Autounattend.xml",
+        "./scripts/init.bat",
+        "./scripts/dis-updates.ps1",
         "./scripts/microsoft-updates.bat",
         "./scripts/win-updates.ps1",
-        "scripts/winrm.bat"
+        "./scripts/winrm.bat"
       ],
       "vmdk_name": "{{ user `vm_name` }}",
       "vmx_data": {

@@ -20,10 +20,10 @@
       "disk_size": "{{ user `disk_size` }}",
       "disk_type_id":"0",
       "floppy_files": [
-        "floppy/win2016-standard/Autounattend.xml",
-        "scripts/win-updates.ps1",
-        "scripts/init.bat",
-        "scripts/winrm.bat"
+        "./floppy/win2016-standard/Autounattend.xml",
+        "./scripts/win-updates.ps1",
+        "./scripts/init.bat",
+        "./scripts/winrm.bat"
       ],
       "vmdk_name": "{{ user `vm_name` }}",
       "vmx_data": {
@@ -39,8 +39,8 @@
     {
       "type": "windows-shell",
       "scripts": [
-        "scripts/vmtools.bat",
-        "scripts/enable-rdp.bat"
+        "./scripts/vmtools.bat",
+        "./scripts/enable-rdp.bat"
       ]
     }
   ],
@@ -48,8 +48,8 @@
     "vm_name": "win2016-standard",
     "headless": "false",
     "disk_size": "131072",
-    "iso_checksum": "3bb1c60417e9aeb3f4ce0eb02189c0c84a1c6691",
-    "iso_url": "iso/14393.0.160715-1616.RS1_RELEASE_SERVER_EVAL_X64FRE_EN-US.ISO",
+    "iso_checksum": "7e33df150cb4d1fe3503e23433a1867ddd79a6ee",
+    "iso_url": "./iso/en_windows_server_2016_x64_dvd_9327751.iso",
     "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\""
   }
 }

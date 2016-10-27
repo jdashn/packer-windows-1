@@ -6,7 +6,7 @@
       "version" : 8,
       "output_directory":"./build/{{ user `vm_name` }}",
       "iso_url": "{{ user `iso_url` }}",
-      "iso_checksum_type": "sha1",
+      "iso_checksum_type": "{{ user `iso_checksum_type` }}",
       "iso_checksum": "{{ user `iso_checksum` }}",
       "headless": "{{ user `headless` }}",
       "boot_wait": "2m",
@@ -48,8 +48,9 @@
     "vm_name": "win10x64-pro",
     "headless": "false",
     "disk_size": "131072",
-    "iso_checksum": "b57921ddf4672c101f312aa66dd481350035d7e9",
-    "iso_url": "./iso/en_windows_10_multiple_editions_version_1511_updated_feb_2016_x64_dvd_8379634.iso",
+    "iso_checksum": "99fd8082a609997ae97a514dca22becf20420891",
+    "iso_checksum_type": "sha1",
+    "iso_url": "./iso/en_windows_10_multiple_editions_version_1607_updated_jul_2016_x64_dvd_9058187.iso",
     "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\""
   }
 }

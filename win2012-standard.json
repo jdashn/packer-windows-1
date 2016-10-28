@@ -4,7 +4,7 @@
       "type": "vmware-iso",
       "vm_name": "{{ user `vm_name` }}",
       "version" : 8,
-      "output_directory":"./build/{{ user `vm_name` }}",
+      "output_directory":"build/{{ user `vm_name` }}",
       "iso_url": "{{ user `iso_url` }}",
       "iso_checksum_type": "{{ user `iso_checksum_type` }}",
       "iso_checksum": "{{ user `iso_checksum` }}",
@@ -13,7 +13,7 @@
       "communicator": "winrm",
       "winrm_username": "vagrant",
       "winrm_password": "vagrant",
-      "winrm_timeout": "2h",
+      "winrm_timeout": "8h",
       "shutdown_timeout": "1h",
       "shutdown_command": "{{ user `shutdown_command`}}",
       "guest_os_type": "windows8srv-64",
@@ -43,7 +43,8 @@
       "type": "windows-shell",
       "scripts": [
         "scripts/vmtools.bat",
-        "scripts/enable-rdp.bat"
+        "scripts/enable-rdp.bat",
+        "scripts/powerconfig.bat"
       ]
     }
   ],
@@ -53,7 +54,7 @@
     "disk_size": "131072",
     "iso_checksum": "d09e752b1ee480bc7e93dfa7d5c3a9b8aac477ba",
     "iso_checksum_type": "sha1",
-    "iso_url": "./iso/en_windows_server_2012_x64_dvd_915478.iso",
+    "iso_url": "iso/en_windows_server_2012_x64_dvd_915478.iso",
     "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\""
   }
 }

@@ -4,7 +4,7 @@
       "type": "vmware-iso",
       "vm_name": "{{ user `vm_name` }}",
       "version" : 8,
-      "output_directory":"./build/{{ user `vm_name` }}",
+      "output_directory":"build/{{ user `vm_name` }}",
       "iso_url": "{{ user `iso_url` }}",
       "iso_checksum_type": "{{ user `iso_checksum_type` }}",
       "iso_checksum": "{{ user `iso_checksum` }}",
@@ -13,20 +13,20 @@
       "communicator": "winrm",
       "winrm_username": "vagrant",
       "winrm_password": "vagrant",
-      "winrm_timeout": "2h",
+      "winrm_timeout": "8h",
       "shutdown_timeout": "1h",
       "shutdown_command": "{{ user `shutdown_command`}}",
       "guest_os_type": "windows7-64",
       "disk_size": "{{ user `disk_size` }}",
       "disk_type_id":"0",
       "floppy_files": [
-        "./floppy/win7x64-pro/Autounattend.xml",
-        "./scripts/dis-updates.ps1",
-        "./scripts/hotfix-KB3102810.bat",
-        "./scripts/microsoft-updates.bat",
-        "./scripts/win-updates.ps1",
-        "./scripts/init.bat",
-        "./scripts/winrm.bat"
+        "floppy/win7x64-pro/Autounattend.xml",
+        "scripts/dis-updates.ps1",
+        "scripts/hotfix-KB3102810.bat",
+        "scripts/microsoft-updates.bat",
+        "scripts/win-updates.ps1",
+        "scripts/init.bat",
+        "scripts/winrm.bat"
       ],
       "vmdk_name": "{{ user `vm_name` }}",
       "vmx_data": {
@@ -52,8 +52,8 @@
   {
     "type": "vagrant",
     "keep_input_artifact": true,
-    "output": "./build/windows_7x64_{{.Provider}}.box",
-    "vagrantfile_template": "./tpl/vagrantfile-windows_7x64.template"
+    "output": "build/windows_7x64_{{.Provider}}.box",
+    "vagrantfile_template": "tpl/vagrantfile-windows_7x64.template"
   }
   ],
   "variables": {

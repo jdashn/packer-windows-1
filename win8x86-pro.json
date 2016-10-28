@@ -1,0 +1,59 @@
+{
+  "builders": [
+    {
+      "type": "vmware-iso",
+      "vm_name": "{{ user `vm_name` }}",
+      "version" : 8,
+      "output_directory":"build/{{ user `vm_name` }}",
+      "iso_url": "{{ user `iso_url` }}",
+      "iso_checksum_type": "{{ user `iso_checksum_type` }}",
+      "iso_checksum": "{{ user `iso_checksum` }}",
+      "headless": "{{ user `headless` }}",
+      "boot_wait": "2m",
+      "communicator": "winrm",
+      "winrm_username": "vagrant",
+      "winrm_password": "vagrant",
+      "winrm_timeout": "8h",
+      "shutdown_timeout": "1h",
+      "shutdown_command": "{{ user `shutdown_command`}}",
+      "guest_os_type": "windows8",
+      "disk_size": "{{ user `disk_size` }}",
+      "disk_type_id":"0",
+      "floppy_files": [
+        "floppy/win8x86-pro/Autounattend.xml",
+        "scripts/init.bat",
+        "scripts/dis-updates.ps1",
+        "scripts/microsoft-updates.bat",
+        "scripts/win-updates.ps1",
+        "scripts/winrm.bat"
+      ],
+      "vmdk_name": "{{ user `vm_name` }}",
+      "vmx_data": {
+        "mks.enable3d": "true",
+        "memsize": "2048",
+        "numvcpus": "1",
+        "scsi0.virtualDev": "lsisas1068",
+        "gui.applyHostDisplayScalingToGuest": "false"
+      }
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "windows-shell",
+      "scripts": [
+        "scripts/vmtools.bat",
+        "scripts/enable-rdp.bat",
+        "scripts/powerconfig.bat"
+      ]
+    }
+  ],
+  "variables": {
+    "vm_name": "win8x86-pro",
+    "headless": "false",
+    "disk_size": "131072",
+    "iso_checksum": "22d680ec53336bee8a5b276a972ceba104787f62",
+    "iso_checksum_type": "sha1",
+    "iso_url": "iso/en_windows_8_x86_dvd_915417.iso",
+    "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\""
+  }
+}

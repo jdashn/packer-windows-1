@@ -133,12 +133,7 @@
                 <!-- END WITHOUT WINDOWS UPDATES -->
                 <!-- WITH WINDOWS UPDATES -->
                 <!-- Disable automatic updates so the system update process doesn't interfere with the update script -->
-<!--                  <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c a:\hotfix-KB2842230.bat</CommandLine>
-                    <Order>97</Order>
-                    <Description>Install Windows Update Hotfix (KB2842230)</Description>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
+<!--                <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c a:\microsoft-updates.bat</CommandLine>
                     <Order>98</Order>
                     <Description>Enable Microsoft Updates</Description>

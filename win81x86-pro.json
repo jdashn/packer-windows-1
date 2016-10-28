@@ -6,7 +6,7 @@
       "version" : 8,
       "output_directory":"./build/{{ user `vm_name` }}",
       "iso_url": "{{ user `iso_url` }}",
-      "iso_checksum_type": "sha1",
+      "iso_checksum_type": "{{ user `iso_checksum_type` }}",
       "iso_checksum": "{{ user `iso_checksum` }}",
       "headless": "{{ user `headless` }}",
       "boot_wait": "2m",
@@ -53,6 +53,7 @@
     "headless": "false",
     "disk_size": "131072",
     "iso_checksum": "802cfcd3a411d99c097ea7e747f0b6697f9bdac4",
+    "iso_checksum_type": "sha1",
     "iso_url": "./iso/en_windows_8_1_x86_dvd_2707392.iso",
     "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\""
   }

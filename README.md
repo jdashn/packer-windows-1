@@ -39,6 +39,8 @@ This repo contains packer templates for following Windows versions:
 - Windows 10 x86
 - Windows 8.1 x64
 - Windows 8.1 x86
+- Windows 8 x64
+- Windows 8 x86
 - Windows 7 x64
 - Windows 7 x86
 
@@ -46,7 +48,7 @@ This repo contains packer templates for following Windows versions:
 Supported versions
 ------------------
 
-This templates where tested using a packer 0.8.6 and VMware Workstation 12.1 Pro.
+This templates where tested using a packer 0.8.6 and VMware Workstation 12.5 Pro.
 
 #### note
 Windows ISO images must be placed in iso folder and file checksums must be updated in template.

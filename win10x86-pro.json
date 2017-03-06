@@ -48,9 +48,9 @@
     "vm_name": "win10x86-pro",
     "headless": "false",
     "disk_size": "131072",
-    "iso_checksum": "5a4d2c953d884578a6adb448bee5753b80ec1cfa",
+    "iso_checksum": "881fb134061d86042aef5f1aba6e255c22a79613",
     "iso_checksum_type": "sha1",
-    "iso_url": "iso/en_windows_10_multiple_editions_version_1607_updated_jul_2016_x86_dvd_9053863.iso",
+    "iso_url": "iso/en_windows_10_multiple_editions_version_1607_updated_jan_2017_x86_dvd_9714393.iso",
     "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\""
   }
 }

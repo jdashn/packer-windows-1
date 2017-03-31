@@ -1,4 +1,3 @@
-==========================
 Windows Packer Templates
 ==========================
 
@@ -15,12 +14,9 @@ Installing Packer using Chocolatey
 Running Packer
 --------------
 
-
-
     $ git clone https://github.com/skylock/packer-windows
     $ cd packer-windows
     $ packer build template_name.json
-
 
 If you want to build only vmware.
 

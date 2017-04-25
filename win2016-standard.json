@@ -49,9 +49,9 @@
     "vm_name": "win2016-standard",
     "headless": "false",
     "disk_size": "131072",
-    "iso_checksum": "7e33df150cb4d1fe3503e23433a1867ddd79a6ee",
+    "iso_checksum": "f185197af68fae4f0e06510a4579fc511ba27616",
     "iso_checksum_type": "sha1",
-    "iso_url": "iso/en_windows_server_2016_x64_dvd_9327751.iso",
+    "iso_url": "iso/en_windows_server_2016_x64_dvd_9718492.iso",
     "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\""
   }
 }

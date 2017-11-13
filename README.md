@@ -35,8 +35,6 @@ This repo contains packer templates for following Windows versions:
 - Windows 10 x86
 - Windows 8.1 x64
 - Windows 8.1 x86
-- Windows 8 x64
-- Windows 8 x86
 - Windows 7 x64
 - Windows 7 x86
 
